@@ -13,9 +13,9 @@ document.getElementById('addMoney-btn').addEventListener('click', function (even
         if (convertedAmount >= 500){
             if (pinNumber.length === 4) {
                 // adding amount in the wallet
-                const sum = convertedMainAmount + convertedAmount;
+                const different = convertedMainAmount - convertedAmount;
                 // sending the sum in the wallet
-                document.getElementById('main-amount').innerText = sum;
+                document.getElementById('main-amount').innerText = different;
                 // this step will reset the input form after adding money
                 document.getElementById('my-form').reset();
             }
@@ -24,7 +24,7 @@ document.getElementById('addMoney-btn').addEventListener('click', function (even
             }
         }
         else {
-            alert('Please Add Minimum $500')
+            alert('Please Withdraw Minimum $500')
         }
     }
     else {
@@ -36,8 +36,8 @@ document.getElementById('addMoney-btn').addEventListener('click', function (even
 document.getElementById('log-out').addEventListener('click',function(event){
     window.location.href = './index.html'
 })
-document.getElementById('cashout').addEventListener('click',function(event){
-    window.location.href = './cashout.html'
+document.getElementById('add-money').addEventListener('click',function(event){
+    window.location.href = './main.html'
 })
 
 

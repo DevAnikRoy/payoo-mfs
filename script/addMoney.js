@@ -16,6 +16,8 @@ document.getElementById('addMoney-btn').addEventListener('click', function (even
                 const sum = convertedMainAmount + convertedAmount;
                 // sending the sum in the wallet
                 document.getElementById('main-amount').innerText = sum;
+                // this step will reset the input form after adding money
+                document.getElementById('my-form').reset();
             }
             else {
                 alert('Please Input 4 Digit PIN')
@@ -28,6 +30,11 @@ document.getElementById('addMoney-btn').addEventListener('click', function (even
     else {
         alert('Please Input a valid 11 Digit Bangladeshi Phone Number');
     }
+})
+
+
+document.getElementById('log-out').addEventListener('click',function(event){
+    window.location.href = './index.html'
 })
 
 

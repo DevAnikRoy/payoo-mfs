@@ -1,8 +1,8 @@
-document.getElementById('cashout-btn').addEventListener('click', function (event) {
+document.getElementById('transfer-btn').addEventListener('click', function (event) {
     event.preventDefault;
-    const agentNumber = document.getElementById('agentNumber-input').value;
-    const amount = getInputValueById('cashOutAmount-input');
-    const pin = document.getElementById('cashOutPin-input').value;
+    const agentNumber = document.getElementById('transferNumber-input').value;
+    const amount = getInputValueById('transferAble-Amount-input');
+    const pin = document.getElementById('transferPin-input').value;
     const mainBalance = getInputValueByInnerText('main-amount');
 
     if(amount > mainBalance){
@@ -22,12 +22,9 @@ document.getElementById('cashout-btn').addEventListener('click', function (event
                 const div = document.createElement('div');
 
                 div.classList.add("bg-[#EDF2FA]","border", "border-sm","border-black", "rounded-lg","p-2","mt-4")
-
-                div.innerHTML = `<h2 class="text-blue-500 text-base font-semibold">Cash Out Amount</h2>
-
+                div.innerHTML = `<h2 class="text-blue-500 text-base font-semibold">Transferred Amount</h2>
                 <h3 class="text-red-500 text-lg font-bold">-$${amount}</h3>
-
-                <p class="text-gray-700 text-sm font-bold">Cash Out Number: ${agentNumber}</p> `;
+                <p class="text-gray-700 text-sm font-bold">Transferred Number: ${agentNumber}</p> `;
 
                 transactionContainer.appendChild(div);
                 
@@ -44,3 +41,4 @@ document.getElementById('cashout-btn').addEventListener('click', function (event
         alert('Enter 11 Digit Valid Bangladeshi Number')
     }
 })
+

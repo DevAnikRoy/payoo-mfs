@@ -2,7 +2,7 @@
 document.getElementById('log-out').addEventListener('click',function(event){
     event.preventDefault;
 
-    window.location.href = './login.html'
+    window.location.href = './index.html'
 })
 
 // add money toggle
